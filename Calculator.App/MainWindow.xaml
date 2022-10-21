@@ -15,7 +15,7 @@
 			<RowDefinition Height="Auto"></RowDefinition>
 			<RowDefinition></RowDefinition>
 		</Grid.RowDefinitions>
-		<TextBox Name="textDisplay" Grid.Row="0" Height="80" FontSize="32" HorizontalContentAlignment="Right" Padding="0 20 10 0" TextWrapping="Wrap"></TextBox>
+        <TextBox Name="textDisplay"  Grid.Row="0" Height="80" FontSize="64" PreviewTextInput="Display_PreviewTextInput" IsReadOnly="True" HorizontalContentAlignment="Right" Padding="0 0 10 0" TextWrapping="Wrap"></TextBox>
 
 		<Grid Grid.Row="1">
 			<Grid.ColumnDefinitions>

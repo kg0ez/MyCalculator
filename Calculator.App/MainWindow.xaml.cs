@@ -63,5 +63,13 @@ namespace Calculator.App
 
             ButtonResult.IsEnabled = true;
         }
+
+        private void Display_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            ((TextBox)sender).Text = ((TextBox)sender).Text.Trim();
+            if ((Convert.ToChar(e.Text) >= (char)48 && Convert.ToChar(e.Text) <= (char)57))
+                e.Handled = false;
+            else e.Handled = true;
+        }
     }
 }

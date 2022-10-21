@@ -84,7 +84,9 @@ namespace Calculator.Logic.Services
 
         public void PlusMinus()
         {
-            if (_calculatorView.Result == CalculatorSymbols.EXCEEDED || _calculatorView.Result == CalculatorSymbols.NOT_DIVISION_ZERO)
+            if (string.IsNullOrEmpty(_calculatorView.Result) 
+                || _calculatorView.Result == CalculatorSymbols.EXCEEDED 
+                || _calculatorView.Result == CalculatorSymbols.NOT_DIVISION_ZERO)
                 return;
 
             double number = double.Parse(_calculatorView.Result);
