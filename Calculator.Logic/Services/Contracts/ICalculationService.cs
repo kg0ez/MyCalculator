@@ -11,7 +11,7 @@ namespace Calculator.Logic.Services
         string GetResultString();
         void GetResult();
         void Calculate(string expression);
-        void ClearOutputField();
+        void Clear();
         void PlusMinus();
     }
 }

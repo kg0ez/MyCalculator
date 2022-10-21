@@ -59,7 +59,7 @@ namespace Calculator.Logic.Services
             _calculatorView.Expression = string.Empty;
         }
 
-        public void ClearOutputField()
+        public void Clear()
         {
             if (_calculatorView.Result.Length == 0)
                 return;
@@ -81,11 +81,13 @@ namespace Calculator.Logic.Services
 
         private void UpdateResult(string value)
         {
+            _calculatorView.Result = string.Empty;
             _calculatorView.Result = value;
         }
 
         private void UpdateExpression(string expression)
         {
+            _calculatorView.Expression = string.Empty;
             _calculatorView.Expression = expression;
         }
     }

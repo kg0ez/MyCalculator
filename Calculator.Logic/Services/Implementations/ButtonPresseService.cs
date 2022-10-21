@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculator.Logic.Services.Implementations
+namespace Calculator.Logic.Services
 {
     public class ButtonPresseService
     {
@@ -28,7 +28,7 @@ namespace Calculator.Logic.Services.Implementations
             _calculatorView.Result = input;
         }
 
-        public void OperationButtonPressed(string input)
+        public void ActionButtonPressed(string input)
         {
             if (_calculatorView.Result == CalculatorSymbols.EXCEEDED || _calculatorView.Result == CalculatorSymbols.NOT_DIVISION_ZERO)
                 return;
