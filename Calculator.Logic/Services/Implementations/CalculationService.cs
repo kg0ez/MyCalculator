@@ -1,5 +1,6 @@
 ﻿using Calculator.Model.Models;
 using System.Data;
+using System.Linq;
 
 namespace Calculator.Logic.Services
 {
@@ -28,7 +29,7 @@ namespace Calculator.Logic.Services
 
         public void Calculate(string expression)
         {
-            if (string.IsNullOrEmpty(expression) || char.IsSymbol(expression[^1]) || char.IsPunctuation(expression[^1]))
+               if (string.IsNullOrEmpty(expression) || char.IsSymbol(expression[^1]) || char.IsPunctuation(expression[^1]))
                 return;
 
             if (expression.StartsWith(CalculatorSymbols.MINUS))
@@ -40,10 +41,22 @@ namespace Calculator.Logic.Services
                 return;
             }
 
-            string result = default;
+            string result = string.Empty;
 
             try
             {
+                if (expression.Contains('*') || expression.Contains('/'))
+                {
+                    string examination = string.Empty;
+
+                    if (expression.Contains('*'))
+                        examination = expression.Split('*')[0];
+                    else
+                       examination = expression.Split('/')[0];
+
+                    if (examination.Contains('+') || examination.Contains('-'))
+                        expression = expression.Replace(examination, $"({examination})");
+                }
                 result = new DataTable().Compute(expression, "").ToString()!.Replace(',', '.');
             }
             catch
@@ -51,9 +64,9 @@ namespace Calculator.Logic.Services
                 result = CalculatorSymbols.EXCEEDED;
             }
 
-            if ((result.Length >= 8 && result.Contains('.')) || result == "∞" || result == "не число")
+            if ((result.Length >= 8 && result.Contains('.')) || result == "∞" || result == "не число" ||result.Length >9)
                 result = CalculatorSymbols.EXCEEDED;
-
+            
             UpdateResult(result);
 
             _calculatorView.Expression = string.Empty;

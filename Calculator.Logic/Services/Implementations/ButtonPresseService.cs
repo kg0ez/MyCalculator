@@ -21,6 +21,7 @@ namespace Calculator.Logic.Services
 
             if (_calculatorView.Result == CalculatorSymbols.EXCEEDED || _calculatorView.Result == CalculatorSymbols.NOT_DIVISION_ZERO)
             {
+                _calculatorView.Result = string.Empty;
                 _calculatorView.Result = input;
                 return;
             }

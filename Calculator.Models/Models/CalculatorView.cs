@@ -4,19 +4,19 @@ namespace Calculator.Model.Models
 {
     public class CalculatorView
     {
-        private StringBuilder _expression = new StringBuilder();
-        private StringBuilder _result = new StringBuilder(10);
+        private StringBuilder? _expression = new StringBuilder();
+        private StringBuilder? _result = new StringBuilder(10);
 
         public delegate void EventHandler();
         public static event EventHandler? ResultChanged;
 
         public string Expression
         {
-            get => _expression.ToString();
+            get => _expression!.ToString();
             set
             {
                 if (value != string.Empty)
-                    _expression.Append(value);
+                    _expression!.Append(value);
                 else 
                     _expression = new StringBuilder(value);
             }
@@ -24,7 +24,7 @@ namespace Calculator.Model.Models
 
         public string Result
         {
-            get => _result.ToString();
+            get => _result!.ToString();
             set
             {
                 if (value == string.Empty)
