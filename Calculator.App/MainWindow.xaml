@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MyCalculator" 
         Height="450" Width="400"
-        ResizeMode="NoResize"
+        ResizeMode="CanMinimize"
         >
 
 	<Grid Margin="15">
