@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace Calculator.Model.Models
 {
     public class CalculatorView
     {
-        private const string _zero = "0";
-        private const char _minus = '-';
-
         private StringBuilder _expression = new StringBuilder();
         private StringBuilder _result = new StringBuilder(10);
 
@@ -43,12 +36,12 @@ namespace Calculator.Model.Models
                     return;
                 }
 
-                if (_result.ToString() == _zero && char.IsDigit(char.Parse(value)))
+                if (_result.ToString() == CalculatorSymbols.ZERO && char.IsDigit(char.Parse(value)))
                 {
                     return;
                 }
 
-                if (value[1..] == _result!.ToString() && value[0] == _minus)
+                if (value[1..] == _result!.ToString() && value[0] == CalculatorSymbols.MINUS)
                 {
                     _result.Clear();
                     _result.Append(value);
