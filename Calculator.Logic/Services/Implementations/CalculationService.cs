@@ -5,25 +5,25 @@ namespace Calculator.Logic.Services
 {
     public class CalculationService: ICalculationService
     {
-        private readonly CalculatorView _model;
+        private readonly CalculatorView _calculatorView;
 
         public CalculationService(CalculatorView model)
         {
-            _model = model;
+            _calculatorView = model;
         }
 
         public string GetResultString()
         {
-            return _model.Result;
+            return _calculatorView.Result;
         }
 
         public void GetResult()
         {
-            _model.Expression = _model.Result;
+            _calculatorView.Expression = _calculatorView.Result;
 
-            UpdateExpression(_model.Expression);
+            UpdateExpression(_calculatorView.Expression);
 
-            Calculate(_model.Expression);
+            Calculate(_calculatorView.Expression);
         }
 
         public void Calculate(string expression)
@@ -56,37 +56,37 @@ namespace Calculator.Logic.Services
 
             UpdateResult(result);
 
-            _model.Expression = string.Empty;
+            _calculatorView.Expression = string.Empty;
         }
 
         public void ClearOutputField()
         {
-            if (_model.Result.Length == 0)
+            if (_calculatorView.Result.Length == 0)
                 return;
 
-            _model.Result = string.Empty;
+            _calculatorView.Result = string.Empty;
         }
 
         
 
         public void PlusMinus()
         {
-            if (_model.Result == CalculatorSymbols.EXCEEDED || _model.Result == CalculatorSymbols.NOT_DIVISION_ZERO)
+            if (_calculatorView.Result == CalculatorSymbols.EXCEEDED || _calculatorView.Result == CalculatorSymbols.NOT_DIVISION_ZERO)
                 return;
 
-            double number = double.Parse(_model.Result);
+            double number = double.Parse(_calculatorView.Result);
 
             UpdateResult((number * (-1)).ToString());
         }
 
         private void UpdateResult(string value)
         {
-            _model.Result = value;
+            _calculatorView.Result = value;
         }
 
         private void UpdateExpression(string expression)
         {
-            _model.Expression = expression;
+            _calculatorView.Expression = expression;
         }
     }
 }
