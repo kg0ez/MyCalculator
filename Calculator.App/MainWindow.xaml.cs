@@ -12,6 +12,28 @@ namespace Calculator.App
         {
             InitializeComponent();
         }
+        private void ActionButton_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
+
+        private void Number_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EqualsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ClearButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void PlusMinus_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
