@@ -1,6 +1,4 @@
-﻿using Calculator.Logic;
-using Calculator.Model;
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 
