@@ -31,6 +31,16 @@ namespace Calculator.Logic.Services
 
             if (_calculatorView.Result.Length == 0)
             {
+                if (_calculatorView.Expression.Length > 0)
+                    foreach (var action in CalculatorSymbols.ACTIONS)
+                        if (_calculatorView.Expression[_calculatorView.Expression.Length - 1] == action)
+                        {
+                            string equation = _calculatorView.Expression.Substring(0, _calculatorView.Expression.Length - 1);
+                            _calculatorView.Expression = string.Empty;
+                            _calculatorView.Expression = equation + input;
+                            return;
+                        }
+
                 _calculatorView.Result.Append('0');
                 return;
             }
