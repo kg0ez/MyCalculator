@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.App", "Calculator.App\Calculator.App.csproj", "{50136FDF-1922-47B7-8D33-6F8A0B85AFD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.App", "Calculator.App\Calculator.App.csproj", "{50136FDF-1922-47B7-8D33-6F8A0B85AFD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Tests", "Calculator.Tests\Calculator.Tests.csproj", "{6CEFAFFA-EDD2-4CB4-B19D-1FFB9590CEAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.Tests", "Calculator.Tests\Calculator.Tests.csproj", "{6CEFAFFA-EDD2-4CB4-B19D-1FFB9590CEAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Logic", "Calculator.Logic\Calculator.Logic.csproj", "{129ED9AD-CE99-444B-9980-1E51D9705EA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.Logic", "Calculator.Logic\Calculator.Logic.csproj", "{129ED9AD-CE99-444B-9980-1E51D9705EA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Model", "Calculator.Models\Calculator.Model.csproj", "{10A6E848-EAF1-49BC-B5C1-99A7FE8A1A3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.Model", "Calculator.Models\Calculator.Model.csproj", "{10A6E848-EAF1-49BC-B5C1-99A7FE8A1A3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

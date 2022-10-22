@@ -28,7 +28,7 @@ namespace Calculator.Logic.Services
 
         public void Calculate(string expression)
         {
-               if (string.IsNullOrEmpty(expression) || char.IsSymbol(expression[^1]) || char.IsPunctuation(expression[^1]))
+            if (string.IsNullOrEmpty(expression) || char.IsSymbol(expression[^1]) || char.IsPunctuation(expression[^1]))
                 return;
 
             if (expression.StartsWith(CalculatorSymbols.MINUS))
@@ -90,7 +90,11 @@ namespace Calculator.Logic.Services
 
             UpdateResult((number * (-1)).ToString());
         }
-
+        public string Equals(string expression)
+        {
+            Calculate(expression);
+            return _calculatorView.Result;
+        }
         private void UpdateResult(string value)
         {
             _calculatorView.Result = string.Empty;
