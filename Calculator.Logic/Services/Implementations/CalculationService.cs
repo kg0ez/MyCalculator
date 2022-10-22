@@ -1,6 +1,5 @@
 ﻿using Calculator.Model.Models;
 using System.Data;
-using System.Linq;
 
 namespace Calculator.Logic.Services
 {
@@ -79,8 +78,6 @@ namespace Calculator.Logic.Services
 
             _calculatorView.Result = string.Empty;
         }
-
-        
 
         public void PlusMinus()
         {
