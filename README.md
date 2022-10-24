@@ -3,7 +3,7 @@
 _Приложение __MyCalculator__ — это приложение для Windows, написанное на C#. Приложение предоставляет стандартные, научные и программные функции калькулятора._ 
 ____
 
-![MyCalculator](https://github.com/kg0ez/MyCalculator/blob/main/Calculator.jpeg "Орк")
+![MyCalculator](https://github.com/kg0ez/MyCalculator/blob/main/Calculator.jpeg "MyCalculator")
 
 _Изображение калькулятора_
 ____
@@ -24,7 +24,7 @@ ___Предпосылки:___
 + Установите необязательный компонент «Средства универсальной платформы Windows».
 + Установите последнюю версию Windows SDK.
 
-![MyCalculator](https://github.com/kg0ez/MyCalculator/blob/main/instal.png?raw=true "Орк")
+![MyCalculator](https://github.com/kg0ez/MyCalculator/blob/main/instal.png?raw=true "Installer")
 
 + Установите расширение для Visual Studio.
 + Получить код: 
